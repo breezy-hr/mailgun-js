@@ -1051,9 +1051,11 @@ Promise Returns: response body
 ```
 {
   address: 'alice@example.com',
-  did_you_mean: null,
-  is_valid: false,
-  parts: { display_name: null, domain: null, local_part: null }
+  is_disposable_address: false,
+  is_role_address: false,
+  reason: [],
+  result: 'undeliverable',
+  risk: 'high'
 }
 ```
 
@@ -1122,13 +1124,13 @@ npm run build
 ## Tests
 
 ```sh
-npm run tests
+npm run test
 ```
 
 Watch tests with
 
 ```sh
-npm run watch-tests
+npm run test-watch
 ```
 
 ## Release Process
